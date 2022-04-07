@@ -14,8 +14,10 @@
 // Triangular Numbers cannot be negative so return 0 if a negative number is given.
 
 function sumTriangularNumbers(n) {
-    if(n <= 0) return 0;
-    for(let i = 1; i < n; i++) {
-      
+    if(n < 0) return 0;
+    let triangles = [];
+    for(let i = 1; i <= n; i++) {
+      triangles.push((i * (i + 1)) / 2);
     }
+    return triangles.reduce((acc, num) => acc + num);
   }
