@@ -222,3 +222,37 @@ function getMiddle(s) {
 function filter_list(l) {
   return l.filter(el => typeof el === 'number');
 }
+
+//May 13 2022
+// Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+
+// Examples
+// "the-stealth-warrior" gets converted to "theStealthWarrior"
+// "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+function toCamelCase(str){
+  //P: a multiple word string delimited by an underscore or a dash
+  //R: the taken in string converted to camel case.
+  //E: "the-stealth-warrior" gets converted to "theStealthWarrior"
+  //  "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+  //P: split the string by the _ or -, into an array.
+      //capitalize the first letter of the words in the array starting from the second element
+    if(str === '') return '';
+    if(str.includes('-')) {
+      let arr = str.split('-');
+      let result = `${arr[0]}`;
+      for(let i = 1; i < arr.length; i++) {
+        result += arr[i][0].toUpperCase() + arr[i].slice(1);
+      }
+      return result;
+      
+    }
+    if(str.includes('_')) {
+      let arr = str.split('_');
+      let result = `${arr[0]}`;
+      for(let i = 1; i < arr.length; i++) {
+        result += arr[i][0].toUpperCase() + arr[i].slice(1);
+      }
+      return result;
+    }
+  }
