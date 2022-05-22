@@ -410,3 +410,20 @@ function nbYear(p0, percent, aug, p) {
    }
   return count;
 }
+
+//May 21 2022
+// Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+function longest(s1, s2) {
+  let set3 = new Set(s1.concat(s2));
+  set3 = Array.from(set3)
+  return set3.sort().join('');
+}
