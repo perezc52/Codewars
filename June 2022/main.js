@@ -14,3 +14,16 @@ function divisors(integer) {
     }
     return result.length === 0 ? `${integer} is prime` : result
   };
+
+  //June 2 2022
+//   Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+function reverseWords(str) {  
+  return str.split(' ').map(el => {
+    return el.split('').reverse().join('')
+  }).join(' ')
+}
