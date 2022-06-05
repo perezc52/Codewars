@@ -90,3 +90,17 @@ function removeSmallest(numbers) {
   let firstIndex = numbers.findIndex(el => el === min)
   return numbers.slice(0,firstIndex).concat(numbers.slice(firstIndex+1))
 }
+
+//June 5 2022
+// Write a function that returns both the minimum and maximum number of the given list/array.
+
+// Examples(Input --> Output)
+// [1,2,3,4,5] --> [1,5]
+// [2334454,5] --> [5, 2334454]
+// [1]         --> [1, 1]
+
+function minMax(arr){
+  let min = Math.min(...arr)
+  let max = Math.max(...arr)
+  return [min, max]
+}
