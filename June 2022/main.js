@@ -366,3 +366,17 @@ function solution(digits){
   }
   return Math.max(...nums)
 }
+
+//June 19 2022
+// Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+// For example: (Input --> Output)
+
+// 10 --> 1
+// 99 --> 18
+// -32 --> 5
+
+function sumDigits(number) {
+  number = Math.abs(number)
+  return number.toString().split('').reduce((acc, el) => Number(acc) + Number(el), 0)
+}
