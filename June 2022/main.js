@@ -434,3 +434,26 @@ function leastLarger(arr,index) {
 function removeUrlAnchor(url){  
   return url.includes('#') ? url.slice(0, url.indexOf('#')) : url
 }
+
+//June 23 2022
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+
+// For example, if this array were passed as an argument:
+
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+
+// Your function would return the following array:
+
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+
+// All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
+
+function sortByLength (array) {
+  let sortedLengths = array.map(el => el.length).sort((a,b) => a - b)
+  let result = []
+  sortedLengths.forEach(el => {
+    let num = el
+    result.push(array.find(el => el.length === num))
+  })
+  return result
+};
