@@ -466,3 +466,15 @@ function sortByLength (array) {
 function noOdds( values ){
   return values.filter(el => el % 2 === 0)
 }
+
+//June 25 2022
+// Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ()
+// In other words , try every combination of a,b,c with [*+()] , and return the Maximum Obtained
+
+function expressionMatter(a, b, c) {
+  let sum = a + b + c
+  let product = a * b * c
+  let par1 = (a + b) * c
+  let par2 = a * (b + c)
+  return Math.max(sum, product, par1, par2)
+}
