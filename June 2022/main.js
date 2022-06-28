@@ -532,3 +532,12 @@ function triangular( n ) {
   if(n <= 0) return 0
   return (n * (n+1)) / 2
 }
+
+//June 28 2022
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+// Return your answer as a number.
+
+function sumMix(x){
+  return x.map(el => Number(el)).reduce((acc, el) => acc + el)
+}
