@@ -541,3 +541,10 @@ function triangular( n ) {
 function sumMix(x){
   return x.map(el => Number(el)).reduce((acc, el) => acc + el)
 }
+
+//June 30 2022
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+function removeExclamationMarks(s) {
+  return s.split('').filter(el => el !== '!').join('')
+}
