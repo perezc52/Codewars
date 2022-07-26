@@ -129,3 +129,24 @@ function warnTheSheep(queue) {
   let num = queue.length - (queue.indexOf('wolf')+1)
   return `Oi! Sheep number ${num}! You are about to be eaten by a wolf!`
 }
+
+//July 26 2022
+// Your task is to find the nearest square number, nearest_sq(n), of a positive integer n.
+
+function nearestSq(n){
+  let higher
+  let lower
+  if(n === 1) return 1
+  for(let i = 1; i <= n; i++) {
+    if(i * i > n) {
+      higher = i * i
+      lower = (i - 1) * (i - 1)
+      break
+    }
+  }
+  if((higher - n) >= (n - lower)) {
+    return lower
+  }else {
+    return higher
+  }
+}
