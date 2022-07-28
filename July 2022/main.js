@@ -165,3 +165,10 @@ function nearestSq(n){
 var replaceDots = function(str) {
   return str.replace(/[.]/g, '-');
 }
+
+//July 28 2022
+// Write reverseList function that simply reverses lists.
+
+function reverseList(arr) {
+  return arr.reverse();
+}
