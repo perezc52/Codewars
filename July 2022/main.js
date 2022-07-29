@@ -172,3 +172,23 @@ var replaceDots = function(str) {
 function reverseList(arr) {
   return arr.reverse();
 }
+
+//July 29 2022
+// Count the number of occurrences of each character and return it as a list of tuples in order of appearance. For empty output return an empty list.
+
+var orderedCount = function (text) {
+  let occurences = {}
+  for(let i = 0; i < text.length; i++) {
+    if(occurences['_'+text[i]]) {
+      occurences['_'+text[i]] += 1
+    }else {
+      occurences['_'+text[i]] = 1
+    }
+  }
+  let shit = []
+  for(const property in occurences) {
+    shit.push([property.slice(1), occurences[property]])
+  }
+  return shit
+  
+}
