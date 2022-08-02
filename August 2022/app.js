@@ -19,3 +19,27 @@ function alexMistakes(numberOfKata, timeLimit){
     //5, 10, 20, 40, 80
     //5, 15, 35, 75
   }
+
+  //August 2 2022
+//   If　a = 1, b = 2, c = 3 ... z = 26
+
+// Then l + o + v + e = 54
+
+// and f + r + i + e + n + d + s + h + i + p = 108
+
+// So friendship is twice stronger than love :-)
+
+function wordsToMarks(string){
+  let code = new Map()
+  let num = 1
+  for(let letter of 'abcdefghijklmnopqrstuvwxyz') {
+    code.set(letter, num)
+    num++
+  }
+  let sum = 0
+  for(let letter of string) {
+    let currentLetter = code.get(letter)
+    sum += currentLetter
+  }
+  return sum
+}
