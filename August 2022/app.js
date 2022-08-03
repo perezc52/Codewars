@@ -43,3 +43,24 @@ function wordsToMarks(string){
   }
   return sum
 }
+
+//August 3 2022
+// Given an array/list [] of integers , Construct a product array Of same size Such That prod[i] is equal to The Product of all the elements of Arr[] except Arr[i].
+
+function productArray(numbers){
+  /*
+  P:takes in an array of integers. they will only be positive whole number elements
+  R:it will return an array of the same size. also positive whole numbers
+  E: [1,2,3,4] would return [24,12,8,6]
+  P:iterate through the array
+    for each element, get all the other elements of the array
+    get the product of those other elements
+    that will be the new result of the current index
+    after all elements are mapped return the new array
+  */
+  return numbers.map((el,i,arr) => {
+    let others = arr.slice(0,i).concat(arr.slice(i+1))
+    let product = others.reduce((acc, el) => acc * el, 1)
+    return product
+  })
+}
