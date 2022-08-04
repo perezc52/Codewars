@@ -64,3 +64,28 @@ function productArray(numbers){
     return product
   })
 }
+
+//August 4 2022
+// Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
+
+// Example:
+
+// 'acb' --> 'bca'
+// 'aabacbaa' --> 'bbabcabb'
+
+function switcheroo(x){
+  /*
+    P: a string comprised of just a's, b's, and c's
+    R: same length string where the a's become b's and the b's become a's. the c's are left untouched
+    R: 'abc' => 'bac'
+    P: make the string to an array to be able to use a map function
+       then map every b to an a and a to a b
+       return the new mapped array as a string
+  */
+    let arr = x.split('')
+    return arr.map(el => {
+      if(el === 'a') return 'b'
+      if(el === 'b') return 'a'
+      return el
+    }).join('')
+  }
