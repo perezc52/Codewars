@@ -89,3 +89,31 @@ function switcheroo(x){
       return el
     }).join('')
   }
+
+  //August 6 2022
+//   Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it should return the value or the index.
+
+// Assume the first parameter will always be an array filled with at least 1 number and no duplicates. Assume the second parameter will be a string holding one of two values: 'value' and 'index'.
+
+// min([1,2,3,4,5], 'value') // => 1
+// min([1,2,3,4,5], 'index') // => 0
+
+function min(arr, toReturn) {
+  /*
+  P:an array of at least one number. only whole numbers and no duplicates.
+  the 2nd will only be the string 'value' or 'index'
+  R:a number represeting either the value or index of the lowest number in the array
+  E: [1,2,3], index => 0, [2,3,4], value => 2
+  P: first find the lowest number in the array and save it to a variable.
+     then see if it is asking for the value or index
+     return the value or the index
+  */
+    let lowestValue = Math.min(...arr)
+    if(toReturn === 'value') {
+      return lowestValue
+    } else {
+      let index = arr.findIndex(el => el === lowestValue) 
+      return index
+    }
+
+}
