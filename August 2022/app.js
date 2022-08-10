@@ -117,3 +117,42 @@ function min(arr, toReturn) {
     }
 
 }
+
+//August 10 2022
+// You are to write an function that takes a string as it's first paramter. This string will be a string of words.
+
+// You are expected to then use the second parameter, which will be an integer, to find the corresponding word in the given string. The first word would be represented by 0.
+
+// Once you have the located string you are finally going to multiply by it the third provided paramater, which will also be an interger. You are additionally required to add a hyphen in between each word.
+
+// Example
+
+// modifyMultiply ("This is a string",3,5) 
+// Should return
+
+// "string-string-string-string-string"
+
+// Since the 3rd word is 'string'(starting from 0 remember) and the third paramater indicates that it should be repeated 5 times.
+
+// Simple. Good luck.
+
+function modifyMultiply (str,loc,num) {
+  /*
+    P: 1st param is a string which will be a sentence. 2nd will be a whole positive integer
+      that will represent a word in the string starting from 0, last will be another whole
+      positive integer that will be the amount of times to multiply the targeted word by.
+    R: we will return a string. and that string will be the targeted word displayed x amount
+    of times and seperated by a hyphen
+    E: "the tree is tall", 2, 3 => "is-is-is"
+    P:first split the string by the spaces to have an array of the words.
+      then with the second param use it to find the necessary word and save it to a variable
+      next create a new string with the saved word and repeat it x times according to the last param  
+  */
+  let strArr = str.split(' ')
+  let word = strArr[loc]
+  let resultArr = []
+  for(let i = 0; i < num; i++) {
+    resultArr.push(word)
+  }
+  return resultArr.join('-')
+} 
