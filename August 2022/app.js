@@ -156,3 +156,30 @@ function modifyMultiply (str,loc,num) {
   }
   return resultArr.join('-')
 } 
+
+//August 14 2022
+// Given a number return the closest number to it that is divisible by 10.
+
+// Example input:
+
+// 22
+// 25
+// 37
+// Expected output:
+
+// 20
+// 30
+// 40
+
+const closestMultiple10 = num => {
+  /*
+  P: a whole number positive or negative
+  R: a whole number that is divisible by 10
+  E: 7 => 10, 1 => 0
+  P: find the two numbers divisible by 10 on the ends of n
+     get the difference between n and the 2 ends
+     return the one with the smallest difference
+  */
+  return Math.round(num / 10) * 10
+
+};
