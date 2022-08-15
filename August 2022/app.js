@@ -183,3 +183,37 @@ const closestMultiple10 = num => {
   return Math.round(num / 10) * 10
 
 };
+
+//august 15 2022
+// Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+
+// Examples:
+
+// * 'abc' =>  ['ab', 'c_']
+// * 'abcdef' => ['ab', 'cd', 'ef']
+
+function solution(str){
+  /*
+  P: takes in a string of letters
+  R: returns an array containing the pairs of letters
+  E: "card" => ['ca', 'rd'], "car" => ['ca', 'r_']
+  P: first determine if the str has even or odd amount of letters
+     if its even then
+     
+  */
+  let arr = []
+  let count = 0
+  let pair
+  for(let i = 0; i < str.length/2; i++) {
+    pair = str.slice(count, count+2)
+    arr.push(pair)
+    count += 2
+  }
+  if(str.length % 2 === 0) {
+    return arr
+  }else {
+    arr[arr.length-1] += '_'
+    return arr
+  }
+  
+}
