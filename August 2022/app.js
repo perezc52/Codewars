@@ -329,3 +329,24 @@ String.prototype.isUpperCase = function() {
  
    return String(this) === String(this.toUpperCase())
  }
+
+ //August 26 2022
+//  Write a program to determine if a string contains only unique characters. Return true if it does and false otherwise.
+
+// The string may contain any of the 128 ASCII characters. Characters are case-sensitive, e.g. 'a' and 'A' are considered different characters.
+
+function hasUniqueChars(str){
+  let instances = {}
+  
+  for(let i = 0; i < str.length; i++) {
+    if(instances[str[i]]) {
+      instances[str[i]]++
+    }else {
+      instances[str[i]] = 1
+    }
+  }
+  
+  let arr = Object.values(instances)
+
+  return arr.every(el => el === 1)
+}
