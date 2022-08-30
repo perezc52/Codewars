@@ -359,3 +359,16 @@ function hasUniqueChars(str){
 function digits(n) {
   return String(n).length
 }
+
+//August 29 2022
+// Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
+
+function adjacentElementsProduct(array) {
+  let max = -Infinity
+  let current
+  for(let i = 0; i < array.length; i++) {
+    current = array[i] * array[i+1]
+    if(current > max) max = current
+  }
+  return max
+}
