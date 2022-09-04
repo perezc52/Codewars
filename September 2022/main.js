@@ -23,3 +23,19 @@ var name = a + b;
 function solution(str, ending){
   return str.endsWith(ending)
  }
+
+//September 4 2022
+// Take a list of ages when each of your great-grandparent died.
+// Multiply each number by itself.
+// Add them all together.
+// Take the square root of the result.
+// Divide by two.
+// Example
+// predictAge(65, 60, 75, 55, 60, 63, 64, 45) === 86
+
+function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
+  let arr = [age1, age2, age3, age4, age5, age6, age7, age8]
+  let sum = arr.map(el => el*el)
+               .reduce((acc, el) => acc + el, 0)
+  return Math.floor(Math.sqrt(sum) / 2)
+}
