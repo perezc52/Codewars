@@ -39,3 +39,20 @@ function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
                .reduce((acc, el) => acc + el, 0)
   return Math.floor(Math.sqrt(sum) / 2)
 }
+
+//September 5 2022
+// Write function which takes a string and make an acronym of it.
+
+// Rule of making acronym in this kata:
+
+// split string to words by space char
+// take every first letter from word in given string
+// uppercase it
+// join them toghether
+// Eg:
+
+// Code wars -> C, w -> C W -> CW
+
+function toAcronym(inp){
+  return inp.split(' ').map(el => el[0].toUpperCase()).join('')
+ }
