@@ -112,3 +112,4 @@ function fizzbuzz(num) {
   }
 }
 console.log(fizzbuzz(15))
+console.log(fizzbuzz(20))
