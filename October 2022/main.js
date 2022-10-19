@@ -143,5 +143,24 @@ function sumMix(arr) {
 
 console.log(sumMix([9, 3, '7', '3']))
 console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
+console.log(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']))
 
-sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0'])
+//October 19 2022
+// It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+
+// Return the average of the given array rounded down to its nearest integer.
+
+// The array will never be empty.
+
+// getAverage([2,2,2,2]),2)
+// getAverage([1,2,3,4,5,]),3);
+// getAverage([1,1,1,1,1,1,1,2]),1)
+
+function getAverage(arr) {
+  return Math.floor(arr.reduce((acc, el) => acc + el, 0) / arr.length)
+  //O(n)
+}
+
+console.log(getAverage([2,2,2,2]))
+console.log(getAverage([1,2,3,4,5,]))
+console.log(getAverage([1,1,1,1,1,1,1,2]))
