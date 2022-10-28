@@ -247,6 +247,27 @@ function solve(arr) {
 // nthSmallest({15,20,7,10,4,3} ,3) ==> return (7) 
 // nthSmallest({177,225,243,-169,-12,-5,2,92} ,5) ==> return (92)
 
-function nthSmallest(arr, pos){
+function nthSMallest(arr, pos) {
   return arr.sort((a,b) => a - b)[pos - 1]
- }
+}
+
+//October 27 2022
+// The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+
+// Examples
+// "din"      =>  "((("
+// "recede"   =>  "()()()"
+// "Success"  =>  ")())())"
+// "(( @"     =>  "))((" 
+
+function transform(str) {
+  return str
+         .toLowerCase()
+         .split('')
+         .map(el => str.indexOf(el) === str.lastIndexOf(el) ? '(' : ')')
+         .join('')
+}
+
+console.log(transform('din'), '(((')
+console.log(transform("recede"), "()()()")
+console.log(transform("Success"), ")())())")
