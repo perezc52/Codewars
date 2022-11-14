@@ -40,3 +40,22 @@ function checkExam(array1, array2) {
     }
     return score < 0 ? 0 : score
   }
+
+  //November 14 2022
+  function greeting(name) {
+    let greeting
+    const date = new Date()
+    const hours = date.getHours()
+    if(hours >= 4 && hours < 12) {
+        greeting = 'morning'
+    }else if(hours >= 12 && hours < 18 ) {
+        greeting = 'afternoon'
+    }else if(hours <= 18 && hours < 20) {
+        greeting = 'evening'
+    }else (
+        greeting = 'night'
+    )
+    console.log(`Good ${greeting}, ${name}`)
+}
+
+greeting("Bob")
