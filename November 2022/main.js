@@ -61,4 +61,3 @@ function checkExam(array1, array2) {
 greeting("Bob")
 
 //November 15 2022
-kjhasf
