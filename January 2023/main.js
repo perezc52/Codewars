@@ -391,6 +391,15 @@ function solve(arr) {
   })
 }
 
+//January 29 2023
+// Find the sum of the odd numbers within an array, after cubing the initial integers. The function should return undefined if any of the values aren't numbers.
+
+function cubeOdd(arr) {
+  if(!arr.every(el => typeof el === 'number')) {
+    return undefined
+  }
+  return arr.filter(el => el % 2 !== 0).reduce((acc, el) => acc + Math.pow(el, 3), 0)
+}
 
 
 
