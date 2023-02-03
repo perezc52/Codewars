@@ -28,3 +28,16 @@ function minSum(arr) {
   }
   return sum
 }
+
+//February 3 2023
+// Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+
+// For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+
+// The input will be a lowercase string with no spaces.
+
+function capitalize(s){
+  let one = s.split('').map((el,i) => i % 2 === 0 ? el.toUpperCase() : el).join('')
+  let two = s.split('').map((el,i) => i % 2 !== 0 ? el.toUpperCase() : el).join('')
+  return [one, two]
+};
