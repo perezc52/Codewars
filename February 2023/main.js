@@ -13,3 +13,18 @@ function myLanguages(results) {
     const scores = entries.filter(el => el[1] >= 60).sort((a,b) => b[1] - a[1]).map(el => el[0])
     return scores
   }
+
+  //February 2 2023
+//   Task
+
+// Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
+
+function minSum(arr) {
+  let sum = 0
+  const sorted = arr.sort((a,b) => a - b)
+  let half = sorted.splice(0, sorted.length/2).reverse()
+  for(let i = 0; i < sorted.length; i++) {
+    sum += sorted[i] * half[i]
+  }
+  return sum
+}
