@@ -178,3 +178,12 @@ function sumStr(a,b) {
   let sum = Number(a) + Number(b)
   return sum.toString()
 }
+
+//February 10 2023
+// Given an array/list [] of n integers , Separate The even numbers from the odds , or Separate the men from the boys
+
+function menFromBoys(arr){
+ let evens = new Set(arr.filter(el => el % 2 === 0).sort((a,b) => a - b))
+ let odds = new Set(arr.filter(el => el % 2 !== 0).sort((a,b) => b - a))
+ return [...evens, ...odds]
+}
