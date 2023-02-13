@@ -208,3 +208,27 @@ function switchItUp(number){
       case 8: return "Eight"
       case 9: return "Nine"
   }
+}
+
+//February 13 2023
+// Definition
+
+// Strong number is the number that the sum of the factorial of its digits is equal to number itself.
+
+// For example, 145 is strong, since 1! + 4! + 5! = 1 + 24 + 120 = 145.
+// Task
+
+// Given a number, Find if it is Strong or not and return either "STRONG!!!!" or "Not Strong !!".
+
+function strong(n) {
+  let factorialSum = n.toString().split('').reduce((acc, el) => Number(acc) + Number(factorial(el)) , 0)
+  return n === factorialSum ? "STRONG!!!!": "Not Strong !!"
+}
+
+function factorial(num) {
+  let res = 1
+  for(let i = num; i > 0; i--) {
+    res *= i
+  }
+    return res
+}
