@@ -252,3 +252,11 @@ function getGrade (s1, s2, s3) {
   if(avg >= 60 && avg < 70) return 'D'
   if(avg < 60) return 'F'
 }
+
+//February 15 2023
+
+// Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+
+function problem(x){
+  return typeof x === 'string' ? "Error" : (x * 50) + 6
+}
