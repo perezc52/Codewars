@@ -43,3 +43,17 @@ function fixTheMeerkat(arr) {
 function explode(s) {
   return s.split('').map(el => el.repeat(Number(el))).join('')
 }
+
+//August 3 2023
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+// Example
+
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+function solution(string) {
+  return string.split('').map(el => (el === el.toUpperCase() ? ` ${el}` : el)).join('')
+}
+
