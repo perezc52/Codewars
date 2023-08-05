@@ -57,3 +57,23 @@ function solution(string) {
   return string.split('').map(el => (el === el.toUpperCase() ? ` ${el}` : el)).join('')
 }
 
+//August 4 2023
+// There is a queue for the self-checkout tills at the supermarket. Your task is write a function to calculate the total time required for all the customers to check out!
+// input
+
+//     customers: an array of positive integers representing the queue. Each integer represents a customer, and its value is the amount of time they require to check out.
+//     n: a positive integer, the number of checkout tills.
+
+// output
+
+// The function should return an integer, the total time required.
+
+function queueTime(customers, n) {
+  let tills = Array(n).fill(0)
+  for(let i = 0; i < customers.length; i++) {
+    let tillMinimum = tills.reduce((min,current) => current < min ? current : min, tills[0])
+    tills[tills.indexOf(tillMinimum)] += customers[i]
+  }
+  return Math.max(...tills)
+}
+
