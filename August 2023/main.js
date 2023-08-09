@@ -133,3 +133,21 @@ function pairs(ar){
   }
    return count
  };
+
+ //August 8 2023
+//  Write a function that removes every lone 9 that is inbetween 7s.
+
+// "79712312" --> "7712312"
+// "79797"    --> "777"
+
+function sevenAte9(str) {
+  let arr = str.split('').map(el => Number(el) || el)
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] === 9 && arr[i-1] === 7 && arr[i+1] === 7 ) {
+      arr.splice(i, 1)
+    }
+  }
+  return arr.map(el => el.toString()).join('')
+}
+
+
