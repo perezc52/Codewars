@@ -227,6 +227,31 @@ function getFirstPython(list) {
   return pythons.length === 0 ? 'There will be no Python developers' : `${pythons[0].firstName}, ${pythons[0].country}`
 }
 
+//August 16 2023
+// Your task is to return an object (associative array in PHP, table in COBOL) which includes the count of each coding language represented at the meetup.
+
+// For example, given the following input array:
+
+// var list1 = [
+//   { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C' },
+//   { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript' },
+//   { firstName: 'Ramon', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby' },
+//   { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C' },
+// ];
+
+function countLanguages(list) {
+  let obj = {}
+  for(let i = 0; i < list.length; i++) {
+    if(obj.hasOwnProperty(list[i].language)) {
+      obj[list[i].language] += 1
+    }else {
+      obj[list[i].language] = 1
+    }
+  }
+  return obj
+}
+
+
 
 
 
