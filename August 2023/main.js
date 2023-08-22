@@ -295,6 +295,11 @@ function vaporcode(string) {
 // odd ones are 1, 3, 5, 7, so the second group is 'oeas'
 // And the final string to return is 'Cdwr oeas'
 
+function sortMyString(S) {
+  let evens = S.split('').filter((el,i) => i % 2 === 0).join('')
+  let odds = S.split('').filter((el,i) => i % 2 !== 0).join('')
+  return `${evens} ${odds}`
+}
 
 
 
